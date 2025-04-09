@@ -16,7 +16,7 @@ app.use('/api', router)
 const PORT = process.env.PORT
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONDODB_URI)
+mongoose.connect(process.env.MONGODB_URI)
 
 app.listen(PORT, ()=>{
     console.log("server is running")
