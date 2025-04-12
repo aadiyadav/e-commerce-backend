@@ -1,18 +1,14 @@
 const productModel = require("../../models/productModel")
 
 const getCategoryProduct = async (req, res) => {
-    try{        
-        const products = await productModel.find();
+    try{
+        const productCategories = await productModel.distinct("category")
 
-        const productByCategory = products.reduce((acc, product) => {
-            const category = product.category;
-            if (!acc[category]) {
-                acc[category] = [];
-            }
-            acc[category].push(product);
-            return acc;
-        }, {});
+        const productByCategoryPromises = productCategories.map(async (category) => {
+            return await productModel.findOne({ category })
+        });
 
+        const productByCategory = await Promise.all(productByCategoryPromises)
 
         res.status(200).json({
             data: productByCategory,
