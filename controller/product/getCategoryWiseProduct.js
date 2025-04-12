@@ -2,7 +2,7 @@ const productModel = require("../../models/productModel")
 
 async function getCategoryWiseProduct (req, res){
     try{
-        const {category} = req?.body || req?.query
+        const {category} = req.body
         const product = await productModel.find({category})
 
         res.status(200).json({
