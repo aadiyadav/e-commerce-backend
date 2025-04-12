@@ -2,10 +2,10 @@ const jwt = require("jsonwebtoken")
 
 async function authToken(req, res, next){
     try{
-        console.log("ok", req)
         const token = req.cookies?.token
+        alert(token)
         if (!token){
-            return res.status(200).json({
+            return res.status(400).json({
                 message: "Have you not logged in yet?",
                 success: false,
                 error: true
