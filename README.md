@@ -115,6 +115,10 @@ Before you begin, ensure you have met the following requirements:
 - `npm start` - Start the server
 - `npm test` - Run tests (to be configured)
 
+## Deployed Link
+
+Check out the live API at https://e-commerce-backend-t41z.onrender.com
+
 ## Database Models
 
 ### User Model
@@ -228,15 +232,15 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 Below are the API architecture and workflow diagrams for the Stud.io backend:
 
-| Authentication Flow | User Management |
+| Home Page | Product Details |
 |-----------|-----------------|  
 | ![Diagram 1](images/1.png) | ![Diagram 2](images/2.png) |
 
-| Product Management | Shopping Cart |
+| Product Listings | Shopping Cart |
 |-----------|----------|  
 | ![Diagram 3](images/3.png) | ![Diagram 4](images/4.png) |
 
-| Database Schema |
+| Admin Panel Products Database |
 |----------|
 | ![Diagram 5](images/5.png) |
 
